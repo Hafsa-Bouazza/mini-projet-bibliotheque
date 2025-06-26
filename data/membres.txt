@@ -1,2 +1,25 @@
-1414;Berrada;
-01;Bouazza Hafsa;457
+01;Bouazza Hafsa;03
+02;Bellafkih Safae;
+03;Kerfati Hajar;
+04;Kerfati Ouissal;08
+05;Oukha Mostafa;10,34
+06;El Amrani Youssef;
+07;Mouline Sara;
+08;Rachidi Omar;
+09;Zahraoui Laila;
+10;Bensalem Karim;
+11;Chraibi Imane;
+12;Fassi Ahmed;
+13;Lahbabi Hana;
+14;Mahmoudi Sami;
+15;Naji Nourredine;31
+16;Ouardi Amal;
+17;Qadiri Yassine;
+18;Rami Salma;
+19;Saidi Zakaria;27,39
+20;Talbi Nabila;
+21;Uday Zakaria;
+22;Vahid Salim;
+23;Yassine Amal;
+24;Zayani Karim;
+25;Aziz Laila;21

@@ -64,7 +64,7 @@ class Bibliotheque:
         historique_path = os.path.join(basedir, "..", "data", "historique.csv")
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         with open(historique_path, mode="a", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
+            writer = csv.writer(f, delimiter=";")
             writer.writerow([now, action, id_membre, isbn])
 
     def emprunter_livre(self, isbn, id_membre):
