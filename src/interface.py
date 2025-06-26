@@ -49,7 +49,7 @@ def charger_livres():
 charger_livres()
 
 # === Formulaire d'ajout de livre ===
-form_frame = ttk.LabelFrame(frame_livres, text="Ajouter un livre")
+form_frame = ttk.LabelFrame(frame_livres, text="Ajouter / Modifier un livre")
 form_frame.pack(padx=10, pady=10, fill="x")
 
 labels = ["ISBN", "Titre", "Auteur", "Année", "Genre"]
@@ -62,7 +62,7 @@ for i, label in enumerate(labels):
 
 form_frame.columnconfigure(1, weight=1)
 
-# === Bouton pour ajouter le livre ===
+# === Ajouter un livre ===
 def ajouter_livre():
     isbn = entries["ISBN"].get().strip()
     titre = entries["Titre"].get().strip()
@@ -86,8 +86,86 @@ def ajouter_livre():
     for entry in entries.values():
         entry.delete(0, tk.END)
 
-btn_ajouter = ttk.Button(form_frame, text="Ajouter le livre", command=ajouter_livre)
-btn_ajouter.grid(row=len(labels), column=0, columnspan=2, pady=10)
+# === Supprimer un livre ===
+def supprimer_livre():
+    selection = tree_livres.selection()
+    if not selection:
+        messagebox.showwarning("Aucune sélection", "Veuillez sélectionner un livre à supprimer.")
+        return
+
+    item = tree_livres.item(selection[0])
+    isbn = item['values'][0]
+    if messagebox.askyesno("Confirmation", f"Supprimer le livre avec ISBN {isbn} ?"):
+        del biblio.livres[isbn]
+        biblio.sauvegarder_donnees()
+        charger_livres()
+        messagebox.showinfo("Supprimé", "Livre supprimé avec succès.")
+
+# === Modifier un livre ===
+def modifier_livre():
+    selection = tree_livres.selection()
+    if not selection:
+        messagebox.showwarning("Aucune sélection", "Veuillez sélectionner un livre à modifier.")
+        return
+
+    entries["ISBN"].config(state="normal")  # Active temporairement
+    isbn = entries["ISBN"].get().strip()
+    entries["ISBN"].config(state="disabled")  # Réactive la désactivation
+
+    if isbn not in biblio.livres:
+        messagebox.showerror("Erreur", "Livre non trouvé dans la base.")
+        return
+
+    titre = entries["Titre"].get().strip()
+    auteur = entries["Auteur"].get().strip()
+    annee = entries["Année"].get().strip()
+    genre = entries["Genre"].get().strip()
+
+    if not (titre and auteur and annee and genre):
+        messagebox.showerror("Erreur", "Veuillez remplir tous les champs (sauf ISBN).")
+        return
+
+    livre = biblio.livres[isbn]
+    livre.titre = titre
+    livre.auteur = auteur
+    livre.annee = annee
+    livre.genre = genre
+    biblio.sauvegarder_donnees()
+    charger_livres()
+    messagebox.showinfo("Succès", "Livre modifié.")
+
+# === Remplir le formulaire en cliquant sur un livre ===
+def remplir_formulaire(event):
+    selection = tree_livres.selection()
+    if not selection:
+        return
+
+    item = tree_livres.item(selection[0])
+    valeurs = item["values"]
+
+    entries["ISBN"].config(state="normal")
+    entries["ISBN"].delete(0, tk.END)
+    entries["ISBN"].insert(0, valeurs[0])
+    entries["ISBN"].config(state="disabled")
+
+    entries["Titre"].delete(0, tk.END)
+    entries["Titre"].insert(0, valeurs[1])
+    entries["Auteur"].delete(0, tk.END)
+    entries["Auteur"].insert(0, valeurs[2])
+    entries["Année"].delete(0, tk.END)
+    entries["Année"].insert(0, valeurs[3])
+    entries["Genre"].delete(0, tk.END)
+    entries["Genre"].insert(0, valeurs[4])
+
+tree_livres.bind("<<TreeviewSelect>>", remplir_formulaire)
+
+# === Boutons ===
+btn_frame = ttk.Frame(form_frame)
+btn_frame.grid(row=len(labels), column=0, columnspan=2, pady=10)
+
+ttk.Button(btn_frame, text="Ajouter le livre", command=ajouter_livre).grid(row=0, column=0, padx=5)
+ttk.Button(btn_frame, text="Modifier le livre", command=modifier_livre).grid(row=0, column=1, padx=5)
+ttk.Button(btn_frame, text="Supprimer le livre", command=supprimer_livre).grid(row=0, column=2, padx=5)
 
 # === Lancement de la fenêtre ===
 root.mainloop()
