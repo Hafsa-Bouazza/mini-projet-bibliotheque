@@ -1,8 +1,8 @@
 01;Bouazza Hafsa;03,09,23
 02;Bellafkih Safae;
-03;Kerfati Hajar;
+03;Kerfati Hajar;12
 04;Kerfati Ouissal;
-05;Oukha Mostafa;
+05;Oukha Mostafa;21
 06;El Amrani Youssef;
 07;Mouline Sara;
 08;Rachidi Omar;
@@ -13,7 +13,7 @@
 13;Lahbabi Hana;
 14;Mahmoudi Sami;
 15;Naji Nourredine;
-16;Ouardi Amal;
+16;Ouardi Amal;07
 17;Qadiri Yassine;
 18;Rami Salma;
 19;Saidi Zakaria;
@@ -23,3 +23,6 @@
 23;Yassine Amal;
 25;Aziz Laila;
 26;Saddouki Meriem;
+28;El Idrissi Samir;
+29;El Idrissi Rania;
+30;Qadiri Imane;

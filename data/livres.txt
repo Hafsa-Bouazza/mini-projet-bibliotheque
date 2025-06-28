@@ -4,21 +4,19 @@
 04;Verity;Colleen Hoover;2018;Romance;True
 05;A Man Called Ove;Fredrik Backman;2012;Drama;True
 06;The Shining;Stephen King;1977;Horror;True
-07;Educated;Tara Westover;2018;Autobiography;True
+07;Educated;Tara Westover;2018;Autobiography;False
 08;The Kite Runner;Khaled Hosseini;2003;Drama;True
 09;Dracula;Bram Stoker;1897;Horror;False
 10;Pride and Prejudice;Jane Austen;1813;Romance;True
 11;The Fault in Our Stars;John Green;2012;Romance;True
-12;Me Before You;Jojo Moyes;2012;Romance;True
-13;Mistborn;Brandon Sanderson;2006;Fantasy;True
-14;The Lies of Locke Lamora;Scott Lynch;2006;Fantasy;True
+12;Me Before You;Jojo Moyes;2012;Romance;False
 15;Eragon;Christopher Paolini;2002;Fantasy;True
 16;The Girl with the Dragon Tattoo;Stieg Larsson;2005;Crime;True
 17;Gone Baby Gone;Dennis Lehane;1998;Crime;True
 18;The Reversal;Michael Connelly;2010;Crime;True
 19;Little Fires Everywhere;Celeste Ng;2017;Drama;True
 20;The Perks of Being a Wallflower;Stephen Chbosky;1999;Drama;True
-21;Normal People;Sally Rooney;2018;Drama;True
+21;Normal People;Sally Rooney;2018;Drama;False
 22;The Haunting of Hill House;Shirley Jackson;1959;Horror;True
 23;Pet Sematary;Stephen King;1983;Horror;False
 24;Bird Box;Josh Malerman;2014;Horror;True
@@ -28,3 +26,6 @@
 28;Born a Crime;Trevor Noah;2016;Autobiography;True
 29;Wild;Cheryl Strayed;2012;Autobiography;True
 30;The Glass Castle;Jeannette Walls;2005;Autobiography;True
+31;The Notebook;Nicholas Sparks;1996;Romance;True
+32;Sharp Objects;Gillian Flynn;2006;Crime;True
+33;In Cold Blood;Truman Capote;1966;Crime;True
