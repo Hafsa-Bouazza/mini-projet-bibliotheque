@@ -418,5 +418,8 @@ btn_genre.pack(pady=10)
 btn_emprunts = ttk.Button(frame_stats, text="👤 Nombre d'emprunts par membre", command=visualisations.emprunts_par_membre)
 btn_emprunts.pack(pady=10)
 
+btn_activite = ttk.Button(frame_stats, text="📆 Activité des emprunts (30 jours)", command=visualisations.activite_emprunts)
+btn_activite.pack(pady=5)
+
 # === Lancement de la fenêtre ===
 root.mainloop()
