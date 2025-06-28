@@ -5,8 +5,8 @@ from collections import Counter
 from datetime import datetime, timedelta
 
 # === Chemins des fichiers ===
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # remonte d’un niveau au-dessus de src/
-DATA_DIR = os.path.join(BASE_DIR, "data")  # data est à côté de src
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # remonte au dossier parent de src/
+DATA_DIR = os.path.join(BASE_DIR, "data")  # dossier data à côté de src/
 LIVRES_PATH = os.path.join(DATA_DIR, "livres.txt")
 HISTORIQUE_PATH = os.path.join(DATA_DIR, "historique.csv")
 
@@ -79,5 +79,54 @@ def activite_emprunts():
     plt.xlabel("Date")
     plt.ylabel("Nombre d'emprunts")
     plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+
+def emprunts_par_membre():
+    membres = []
+
+    try:
+        with open(HISTORIQUE_PATH, newline="", encoding="utf-8") as f:
+            lecteur = csv.reader(f, delimiter=";")
+            for ligne in lecteur:
+                if len(ligne) >= 4 and ligne[1] == "emprunt":  # action à l'indice 1
+                    id_membre = ligne[2]  # id_membre à l'indice 2 (selon ta structure)
+                    membres.append(id_membre)
+
+        compteur = Counter(membres)
+
+        if not compteur:
+            print("Aucun emprunt trouvé dans l'historique.")
+            return
+
+        noms = list(compteur.keys())
+        valeurs = list(compteur.values())
+
+        plt.figure(figsize=(8, 6))
+        plt.bar(noms, valeurs, color="orange")
+        plt.title("Nombre d'emprunts par membre")
+        plt.xlabel("ID Membre")
+        plt.ylabel("Nombre d'emprunts")
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.show()
+
+    except FileNotFoundError:
+        print(f"Erreur : fichier '{HISTORIQUE_PATH}' introuvable.")
+
+def livres_par_genre(biblio):
+    genres = [livre.genre for livre in biblio.livres.values()]
+    if not genres:
+        print("Aucun livre disponible.")
+        return
+
+    compteur = Counter(genres)
+    labels = list(compteur.keys())
+    tailles = list(compteur.values())
+
+    plt.figure(figsize=(6, 6))
+    plt.pie(tailles, labels=labels, autopct="%1.1f%%", startangle=140)
+    plt.title("Répartition des livres par genre")
+    plt.axis("equal")
     plt.tight_layout()
     plt.show()

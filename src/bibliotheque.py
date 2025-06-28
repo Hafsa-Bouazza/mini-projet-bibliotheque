@@ -153,4 +153,6 @@ class Bibliotheque:
                     livres_empruntes = parts[2].split(",") if len(parts) > 2 and parts[2] else []
                     membre = Membre(id_membre, nom)
                     membre.livres_empruntes = livres_empruntes
-                    self.membres[id_membre] = membre
+                    id_membre = parts[0].strip()
+                    self.membres[str(id_membre).strip()] = membre
+
