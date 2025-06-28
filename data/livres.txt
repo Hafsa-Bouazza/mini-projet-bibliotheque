@@ -1,39 +1,30 @@
-01;It en with us;Colleen Hoover;2016;Romance;False
-02;Harry Potter and the Goblet of Fire;J.K. Rowling;2000;Fantasy;False
-03;The Five People You Meet in Heaven;Mitch Albom;2003;Philosophical Fiction;False
-04;The Name of the Wind;Patrick Rothfuss;2007;Fantasy;True
-05;Thinking, Fast and Slow;Daniel Kahneman;2011;Psychology;True
-06;Murder on the Orient Express;Agatha Christie;1934;Crime;True
-07;The Silent Patient;Alex Michaelides;2019;Crime;True
-08;In the Woods;Tana French;2007;Crime;False
-09;1984;George Orwell;1949;Science-fiction;True
-10;Verity;Colleen Hoover;2018;Romance;False
-11;The Alchemist;Paulo Coelho;1988;Philosophical Fiction;True
-12;Brave New World;Aldous Huxley;1932;Science-fiction;True
-13;The Hobbit;J.R.R. Tolkien;1937;Fantasy;True
-14;And Then There Were None;Agatha Christie;1939;Policier;True
-15;Before I Go to Sleep;S.J. Watson;2011;Crime;True
-16;Man's Search for Meaning;Viktor E. Frankl;1946;Psychology;True
-17;Reminders of Him;Colleen Hoover;2022;Romance;True
-18;Flowers for Algernon;Daniel Keyes;1966;Science-fiction;True
-19;The Psychology of Money;Morgan Housel;2020;Psychology;True
-20;The Da Vinci Code;Dan Brown;2003;Thriller;True
-21;A Man Called Ove;Fredrik Backman;2012;Drama;False
-22;Into the Wild;Jon Krakauer;1996;Biography;True
-23;The Book Thief;Markus Zusak;2005;Historical Fiction;True
-24;Pet Sematary;Stephen King;1983;Horror;True
-25;The Old Man and the Sea;Ernest Hemingway;1952;Literary Fiction;True
-26;Wild;Cheryl Strayed;2012;Memoir;True
-27;The Shining;Stephen King;1977;Horror;False
-28;Life of Pi;Yann Martel;2001;Adventure;True
-29;Educated;Tara Westover;2018;Autobiography;True
-30;Gone Girl;Gillian Flynn;2012;Thriller;True
-31;The Kite Runner;Khaled Hosseini;2003;Drama;False
-32;Steve Jobs;Walter Isaacson;2011;Biography;True
-33;All the Light We Cannot See;Anthony Doerr;2014;Historical Fiction;True
-34;Dracula;Bram Stoker;1897;Horror;False
-35;To Kill a Mockingbird;Harper Lee;1960;Literary Fiction;True
-36;The Reversal;Michael Connelly;2010;Crime;True
-37;Red Queen;Victoria Aveyard;2015;Fantasy;True
-38;Sophie’s World;Jostein Gaarder;1991;Philosophical Fiction;True
-39;Thinking in Systems;Donella H. Meadows;2008;Psychology;False
+01;It End with Us;Colleen Hoover;2016;Romance;True
+02;Harry Potter and the Goblet of Fire;J.K. Rowling;2000;Fantasy;True
+03;In the Woods;Tana French;2007;Crime;True
+04;Verity;Colleen Hoover;2018;Romance;True
+05;A Man Called Ove;Fredrik Backman;2012;Drama;True
+06;The Shining;Stephen King;1977;Horror;True
+07;Educated;Tara Westover;2018;Autobiography;True
+08;The Kite Runner;Khaled Hosseini;2003;Drama;True
+09;Dracula;Bram Stoker;1897;Horror;False
+10;Pride and Prejudice;Jane Austen;1813;Romance;True
+11;The Fault in Our Stars;John Green;2012;Romance;True
+12;Me Before You;Jojo Moyes;2012;Romance;True
+13;Mistborn;Brandon Sanderson;2006;Fantasy;True
+14;The Lies of Locke Lamora;Scott Lynch;2006;Fantasy;True
+15;Eragon;Christopher Paolini;2002;Fantasy;True
+16;The Girl with the Dragon Tattoo;Stieg Larsson;2005;Crime;True
+17;Gone Baby Gone;Dennis Lehane;1998;Crime;True
+18;The Reversal;Michael Connelly;2010;Crime;True
+19;Little Fires Everywhere;Celeste Ng;2017;Drama;True
+20;The Perks of Being a Wallflower;Stephen Chbosky;1999;Drama;True
+21;Normal People;Sally Rooney;2018;Drama;True
+22;The Haunting of Hill House;Shirley Jackson;1959;Horror;True
+23;Pet Sematary;Stephen King;1983;Horror;False
+24;Bird Box;Josh Malerman;2014;Horror;True
+25;Becoming;Michelle Obama;2018;Autobiography;True
+26;I Am Malala;Malala Yousafzai;2013;Autobiography;True
+27;When Breath Becomes Air;Paul Kalanithi;2016;Autobiography;True
+28;Born a Crime;Trevor Noah;2016;Autobiography;True
+29;Wild;Cheryl Strayed;2012;Autobiography;True
+30;The Glass Castle;Jeannette Walls;2005;Autobiography;True
